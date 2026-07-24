@@ -40,13 +40,13 @@ export const login = asyncHandler(async (req, res) => {
 	let user = await User.findOne({ email });
 
 	if (!user) {
-		throw new ApiError(401, 'incorrect email or password');
+		throw new ApiError(400, 'incorrect email or password');
 	}
 
 	const isCorrectPassword = await user.isPasswordCorrect(password);
 
 	if (!isCorrectPassword) {
-		throw new ApiError(401, 'incorrect email or password');
+		throw new ApiError(400, 'incorrect email or password');
 	}
 
 	const fetchedposts = await Post.find({ author: user._id }).sort({ createdAt: -1 });
