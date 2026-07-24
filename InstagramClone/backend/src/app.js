@@ -9,7 +9,10 @@ import { errorHandler } from './middlewares/error.middleware.js';
 const app = express();
 
 const corsOptions = {
-	origin: 'http://localhost:5173',
+	// origin: 'http://localhost:5173',
+	// credentials: true,
+
+	origin: ['http://localhost:5173', process.env.FRONTEND_URL],
 	credentials: true,
 };
 
