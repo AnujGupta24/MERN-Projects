@@ -160,9 +160,7 @@ function Post({ post }) {
 								onClick={followOrUnfollowHandler}
 								variant="ghost"
 								className={`cursor-pointer w-fit p-5 font-bold ${
-									isFollowing
-										? 'text-[#ed4956] hover:text-[#f41d2f]'
-										: 'text-[#3badf8] hover:text-[#2f8bd1]'
+									isFollowing ? 'text-[#ed4956] hover:text-[#f41d2f]' : 'text-[#3badf8] hover:text-[#2f8bd1]'
 								}`}
 							>
 								{isFollowing ? 'Unfollow' : 'Follow'}

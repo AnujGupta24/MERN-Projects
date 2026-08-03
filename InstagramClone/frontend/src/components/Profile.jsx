@@ -62,7 +62,7 @@ function Profile() {
 	const followOrUnfollowHandler = async () => {
 		try {
 			const res = await axiosInstance.post(`/user/followorunfollow/${userProfile?._id}`);
-			console.log('follow or unfollow res', res);
+			// console.log('follow or unfollow res', res);
 
 			if (res.data.success) {
 				dispatch(toggleFollowOrUnfollowUser(userProfile._id));

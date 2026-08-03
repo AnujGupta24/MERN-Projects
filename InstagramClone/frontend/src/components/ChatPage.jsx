@@ -11,7 +11,7 @@ import { toast } from 'sonner';
 
 function ChatPage() {
 	const { user, suggestedUsers } = useSelector((state) => state.auth);
-	console.log('USER: ', user, 'SUGGESTEDUSERS: ', suggestedUsers);
+	// console.log('USER: ', user, 'SUGGESTEDUSERS: ', suggestedUsers);
 
 	const { selectedUser, onlineUsers, messages } = useSelector((state) => state.chat);
 	const { socket } = useSelector((state) => state.socketio);

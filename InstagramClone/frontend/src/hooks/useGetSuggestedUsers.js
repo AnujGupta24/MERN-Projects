@@ -10,7 +10,7 @@ const useGetSuggestedUsers = () => {
 		const fetchSuggestedUsers = async () => {
 			try {
 				const res = await axiosInstance.get('/user/suggested-users');
-				console.log('useGetSuggestedUsers API RES', res);
+				// console.log('useGetSuggestedUsers API RES', res);
 
 				const users = res.data.data.users;
 				if (res.data.success) {

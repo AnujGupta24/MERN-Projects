@@ -22,8 +22,8 @@ function LeftSidebar() {
 
 	const sidebarItems = [
 		{ icon: <Home />, text: 'Home' },
-		{ icon: <Search />, text: 'Search' },
-		{ icon: <TrendingUp />, text: 'Explore' },
+		// { icon: <Search />, text: 'Search' },
+		// { icon: <TrendingUp />, text: 'Explore' },
 		{ icon: <MessageCircle />, text: 'Messages' },
 		{ icon: <Heart />, text: 'Notifications' },
 		{ icon: <PlusSquare />, text: 'Create' },
@@ -114,18 +114,12 @@ function LeftSidebar() {
 									likeNotification.map((notification) => (
 										<div key={notification.userId} className="flex items-center gap-3 my-3">
 											<Avatar className="h-6 w-6">
-												<AvatarImage
-													src={notification.userDetails?.profilePicture}
-													className="object-cover"
-												/>
+												<AvatarImage src={notification.userDetails?.profilePicture} className="object-cover" />
 												<AvatarFallback>👤</AvatarFallback>
 											</Avatar>
 
 											<p className="text-sm">
-												<span className="font-bold">
-													{notification.userDetails?.username}
-												</span>{' '}
-												liked your post
+												<span className="font-bold">{notification.userDetails?.username}</span> liked your post
 											</p>
 										</div>
 									))
